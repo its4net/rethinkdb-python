@@ -118,7 +118,7 @@ class Query(object):
 class Response(object):
     def __init__(self, token, json_str, reql_decoder=ReQLDecoder()):
         try:
-            json_str = json_str.decode("utf-8")
+            json_str = json_str.decode("utf-8","ignore")
         except AttributeError:
             pass  # Python3 str objects are already utf-8
         self.token = token
